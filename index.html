@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			background-color: #333;
+		}
+
+	.wrapper{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 125%;
+		height: 125%;
+		flex-direction: column;
+	}
+	span{
+		color: #eee;
+	}
+	button{
+		cursor: pointer;
+		position:absolute;
+		width: 100px;
+		height: 50px;
+		transition: all 0.2s;
+		border-radius: 8px;
+		text-align: center;
+	}
+	#yes {
+		transform: translate(-50px, 120px);
+	}
+	#no {
+		transform: translate(-50px, 120px);
+	}
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<span id="msg">Valentine's na bukas, Gusto mo ba akong makasama?</span><br>
+	<img src="https://media1.tenor.com/images/11c5360a19960c9fe2d014f66c283b06/tenor.gif?itemid=17876456" alt="" id="sticker" height="150px" width="150px">
+	<button id="yes" style="color: green;"
+onclick="window.location.href='file:///C:/Users/Administrator/Downloads/walang-kadate-main/flower-animation/dist/index.html'">
+Yes!!!
+</button>
+<br>
+	<button id="no" style="color: red; margin-left: 20%;">Nooo.</button>
+</div>
+
+<script>
+	let no = document.getElementById('no');
+
+	no.addEventListener('click', function () {
+		let randX = Math.random() * 80; // keep inside screen
+		let randY = Math.random() * 80;
+
+		no.style.position = "absolute";
+		no.style.left = randX + '%';
+		no.style.top = randY + '%';
+	});
+</script>
+
+ <p style="text-align: right; margin-top: 10px; margin-right: 20px; font-size: 20px;"> arexan</p>
+</body>
+</html>
